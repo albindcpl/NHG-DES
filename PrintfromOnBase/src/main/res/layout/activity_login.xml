@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="50dp"
+    android:layout_marginBottom="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    tools:context="com.dcpl.printfromonbase.OnBase_Login_Screen">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_ground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/hpsimplified"
+            android:text= "@string/Welcome_Print_from_OnBase"
+            android:textColor="#ffffff"
+            android:textSize="31sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvadmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="750dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Admin"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/questionmark"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ivquestionMark"
+            android:layout_marginLeft="820dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/information"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ivMenuBar"
+            android:layout_marginLeft="850dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="20dp"></ImageView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="350dp"
+            android:background="#ffffff" />
+        />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="180dp"
+            android:layout_marginBottom="50dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                android:text="OnBase Login"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#0096D6"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="100dp"
+                android:padding="20dp"
+                android:text="Domain"
+                android:id="@+id/tvDomain"
+                android:visibility="invisible"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#0096D6"
+                android:textStyle="bold"
+                android:textSize="23sp" />
+
+
+            <Spinner
+                android:id="@+id/spSpinnerDomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvDTG"
+                android:layout_marginLeft="200dp"
+                android:visibility="invisible"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="50dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/Viewview"
+                android:layout_marginTop="160dp"
+                android:layout_marginLeft="100dp"
+                android:visibility="invisible"
+                android:layout_marginRight="100dp"
+                android:background="#000000" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:textColorHint="#9ee6D6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0096D6"
+                    android:layout_marginLeft="100dp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100"
+                    android:textColor="#0096D6"
+                    android:textSize="23sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:textColorHint="#9ee6D6"
+                app:passwordToggleDrawable="@drawable/show_password_selector"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:backgroundTint="#0096D6"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:drawableLeft="@drawable/key"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:textColor="#0096D6"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnogin"
+                android:layout_marginTop="320dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textStyle="bold"
+                android:fontFamily="@font/hpsimplified"
+                android:background="@drawable/rounded_button"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                android:textSize="23sp"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/key"
+                android:id="@+id/ivKeys"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="340dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</LinearLayout>

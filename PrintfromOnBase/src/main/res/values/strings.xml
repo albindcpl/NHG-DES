@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">Print from OnBase</string>
+    <string name="Welcome_Print_from_OnBase">Welcome to "\"Print from OnBase\""</string>
+
+    <string name="Administrator">To change server settings you need to login as Admininstrator</string>
+
+    <string name="Terms_and_Conditions">End-User License Agreement (EULA) of Print from OnBase
+This End-User License Agreement ("EULA") is a legal agreement between you and Dee Vee Cloud Programming LLP \n\n
+This EULA agreement governs your acquisition and use of our Print from OnBase software ("Software") directly from Dee Vee Cloud Programming LLP or indirectly through a Dee Vee Cloud Programming LLP authorized reseller or distributor (a "Reseller").\n
+Please read this EULA agreement carefully before completing the installation process and using the Print from OnBase software. It provides a license to use the Print from OnBase software and contains warranty information and liability disclaimers.\n
+If you register for a free trial of the Print from OnBase software, this EULA agreement will also govern that trial. By clicking "accept" or installing and/or using the Print from OnBase software, you are confirming your acceptance of the Software and agreeing to become bound by the terms of this EULA agreement.\n
+If you are entering into this EULA agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity and its affiliates to these terms and conditions. If you do not have such authority or if you do not agree with the terms and conditions of this EULA agreement, do not install or use the Software, and you must not accept this EULA agreement.\n
+This EULA agreement shall apply only to the Software supplied by Dee Vee Cloud Programming LLP herewith regardless of whether other software is referred to or described herein. The terms also apply to any Dee Vee Cloud Programming LLP updates, supplements, Internet-based services, and support services for the Software, unless other terms accompany those items on delivery. If so, those terms apply.\n\n
+License Grant\n
+Dee Vee Cloud Programming LLP hereby grants you a personal, non-transferable, non-exclusive licence to use the Print from OnBase software on your devices in accordance with the terms of this EULA agreement.\n
+You are permitted to load the Print from OnBase software (for example a PC, laptop, mobile or tablet) under your control. You are responsible for ensuring your device meets the minimum requirements of the Print from OnBase software.\n\n
+You are not permitted to:\n
+
+
+•	Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor permit the whole or any part of the Software to be combined with or become incorporated in any other software, nor decompile, disassemble or reverse engineer the Software or attempt to do any such things\n
+•	Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose\n
+•	Allow any third party to use the Software on behalf of or for the benefit of any third party\n
+•	Use the Software in any way which breaches any applicable local, national or international law\n
+•	use the Software for any purpose that Dee Vee Cloud Programming LLP considers is a breach of this EULA agreement\n\n
+
+
+Intellectual Property and Ownership\n
+
+
+Dee Vee Cloud Programming LLP shall at all times retain ownership of the Software as originally downloaded by you and all subsequent downloads of the Software by you.\n The Software (and the copyright, and other intellectual property rights of whatever nature in the Software, including any modifications made thereto) are and shall remain the property of Dee Vee Cloud Programming LLP.\n
+Dee Vee Cloud Programming LLP reserves the right to grant licences to use the Software to third parties.\n\n
+
+
+Termination\n
+This EULA agreement is effective from the date you first use the Software and shall continue until terminated.\n You may terminate it at any time upon written notice to Dee Vee Cloud Programming LLP.\n
+It will also terminate immediately if you fail to comply with any term of this EULA agreement. \nUpon such termination, the licenses granted by this EULA agreement will immediately terminate and you agree to stop all access and use of the Software. \nThe provisions that by their nature continue and survive will survive any termination of this EULA agreement.\n
+Governing Law\n
+
+
+This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of in.\n\n
+
+
+I have read and understand this EULA, I am authorized to agree to the terms set out in this EULA, and I agree to the terms set out in this EULA.
+</string>
+    <string name="version">VERSION: %1$s / %2$d, API: %3$s / %4$d</string>
+    <string name="service_not_supported">PrinterService is not supported</string>
+    <string name="mass_storage_not_supported">MassStorageService is not supported</string>
+    <string name="sdk_support_missing">Please install / update HP Workpath SDK Services application to proceed</string>
+    <string name="unknown_error">Unexpected error:</string>
+    <string name="permission_not_granted">Permission is not granted, please reinstall the app!</string>
+    <string name="capabilities_not_available">Capabilities are not available</string>
+    <string name="capabilities_not_loaded">Please press \"Get Capabilities\" before submitting a job</string>
+    <string name="error_select_file">File selection error</string>
+    <string name="job_id">Job ID: %s</string>
+
+    <!-- UI elements text -->
+    <string name="print_text">Print</string>
+    <string name="load_caps_button">Get Capabilities</string>
+    <string name="load_defaults_button">Get Defaults</string>
+    <string name="get_status_button">Get Status</string>
+    <string name="get_tray_info_button">Get TrayInfo</string>
+    <string name="pref_show_settings">Settings UI</string>
+    <string name="pref_show_job_progress">Show Job Progress</string>
+    <string name="getjobinfo_button">Get Job Info</string>
+    <string name="select_file">Select File</string>
+    <string name="succeed">Succeed</string>
+    <string name="ok">OK</string>
+    <string name="na">N/A</string>
+
+    <!-- Document Format Items -->
+    <string name="pref_copies">Copies</string>
+    <string name="pref_color_mode">Color Mode</string>
+    <string name="pref_default_value">DEFAULT</string>
+    <string name="pref_auto_value">AUTO</string>
+    <string name="pref_duplex_mode">Duplex Mode</string>
+    <string name="pref_staple_mode">Staple Mode</string>
+    <string name="pref_collate_mode">Collate Mode</string>
+    <string name="pref_paper_source">Paper Source</string>
+    <string name="pref_paper_size">Paper Size</string>
+    <string name="pref_paper_type">Paper Type</string>
+    <string name="pref_doc_format">Document Format</string>
+    <string name="pref_monitoring_job">Monitoring Job</string>
+    <string name="pref_source">Source to print</string>
+    <string name="pref_Source_default">STORAGE</string>
+    <string name="pref_source_storage">Print from Storage Attributes</string>
+    <string name="pref_source_http">Print from HTTP Attributes</string>
+    <string name="pref_source_usb">Print From USB Attributes</string>
+    <string name="pref_source_stream">Print From Stream Attributes</string>
+    <string name="pref_uri">HTTP URL</string>
+    <string name="pref_uri_username">URL Username</string>
+    <string name="pref_uri_password">URL Password</string>
+    <string name="pref_usb_storage">USB Storage</string>
+    <string name="pref_job_name">Job Name</string>
+    <string name="pref_filename">File Name</string>
+    <string name="pref_usb_filename">File Path</string>
+    <string name="pref_stream_filename">File Path to stream</string>
+    <string name="pref_autoFit">Auto Fit</string>
+    <string name="category_attrs">Base Print Attributes</string>
+    <string name="category_feedback">Feedback</string>
+    <string name="category_print_status">Print Status</string>
+    <string name="category_tray_status">Tray Status</string>
+    <string name="pref_copy_test_page">Copy Test Page</string>
+
+    <!-- Messages -->
+    <string name="received_complete_intent">Monitoring Job: received Completed intent</string>
+    <string name="loaded_caps">Capabilities were loaded and applied to available options</string>
+    <string name="title_format">\ [%1$d, %2$d]</string>
+    <string name="no_job_info">No job information</string>
+    <string name="job_completed">Print job completed. Job name: %s</string>
+    <string name="job_cancelled">Print job cancelled</string>
+    <string name="job_failed">Print job failed</string>
+    <string name="empty_directory">Empty Directory</string>
+    <string name="test_page_copied">Test page copied in internal storage</string>
+
+
+</resources>
+

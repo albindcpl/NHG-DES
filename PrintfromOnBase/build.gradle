@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 29
+       // targetSdkVersion 31
+
+        applicationId "com.dcpl.PFOB"
+
+        versionName "1.0"
+        versionCode 1
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+
+    repositories {
+        maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases' }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable false
+        }
+
+        lintOptions {
+            abortOnError false
+            checkReleaseBuilds false
+        }
+
+        customDebuggableBuildType {
+            debuggable false
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            debuggable false
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    // AndroidX libraries
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'com.google.android.material:material:1.6.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    implementation 'com.google.code.ksoap2-android:ksoap2-android:3.6.0'
+    implementation 'org.lucasr.twowayview:twowayview:0.1.4'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    implementation project(path: ':WorkpathLib')
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'junit:junit:4.13.2'
+}

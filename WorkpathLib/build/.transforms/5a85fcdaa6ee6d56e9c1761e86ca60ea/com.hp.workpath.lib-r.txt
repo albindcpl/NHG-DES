@@ -1,0 +1,19 @@
+com.hp.workpath.lib
+id password
+id username
+layout fragment_credentials
+string cancel_job
+string connection_dialog_message
+string connection_dialog_title
+string credentials_dialog_password
+string credentials_dialog_required
+string credentials_dialog_title
+string credentials_dialog_username
+string job_cancel_failed
+string job_cancel_success
+string next_page_scan
+string no
+string progress_dialog_title
+string sps_default_progress_text
+string yes
+xml file_provider_paths

@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="#54898383">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:id="@+id/ivPluses"
+      android:src="@drawable/pluses"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ivMinus"
+        android:src="@drawable/minus"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#0096D6"
+        android:text="Setting"
+        android:fontFamily="@font/hpsimplified"
+        android:layout_marginLeft="300dp"
+        android:padding="5dp"
+        android:textSize="18sp"
+        />
+
+  </LinearLayout>
+
+  <ScrollView android:layout_marginTop="35dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/SCscrollView">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlmainactivity">
+
+
+      <RadioGroup
+          android:id="@+id/radioGroupPaperType"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="5dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Paper Type"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioPlains"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Plain"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioBonds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Bond"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioColoured"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Coloured"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioLight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Light"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupColorModes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="400dp"
+          android:layout_marginTop="5dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Color Mode"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioDefault"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Default"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioAuto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Auto"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioColors"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Color"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioMono"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Mono"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+
+      <RadioGroup
+          android:id="@+id/radioGroupDuplexMode"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="800dp"
+          android:layout_marginTop="5dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Duplex"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioDefaults"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Default"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioBooks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Book"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioFlips"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Flip"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioNones"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="None"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupPaperSizes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="250dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="PaperSize"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:id="@+id/radioA3s"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="A3"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioA4s"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="A4"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioLetters"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Letter"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioLegals"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Legal"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupStapleModes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="500dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Staple Mode"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioDefaultStaple"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Default"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioNoneStaple"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="None"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioStaples"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Staple"
+            android:textColor="#9ee6D6"
+            android:layout_marginBottom="100dp"
+            android:textSize="20dp" />
+
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupAutofit"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="400dp"
+          android:layout_marginTop="500dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Autofit"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioAutofitDefault"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Defult"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioTrues"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="True"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioFalses"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="False"
+            android:textColor="#9ee6D6"
+            android:layout_marginBottom="100dp"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupDocumentFormat"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="400dp"
+          android:layout_marginTop="250dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Document Format"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioAutoDF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Auto"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioJPEG"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="JPEG"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioTiff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="TIFF"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioPDF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="PDF"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+
+      <RadioGroup
+          android:id="@+id/radioPaperSource"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="800dp"
+          android:layout_marginTop="250dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Paper Source"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioDefultPS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Defult"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioAutoPS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Auto"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioTray_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Tray_1"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioTray_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Tray_2"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <RadioGroup
+          android:id="@+id/radioGroupCollatedMode"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="800dp"
+          android:layout_marginTop="500dp"
+          tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="15dp"
+            android:text="Collate Mode"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioCollateDefault"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Default"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioCollate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Collated"
+            android:textColor="#9ee6D6"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioNonCollated"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Non-Collated"
+            android:textColor="#9ee6D6"
+            android:layout_marginBottom="100dp"
+            android:textSize="20dp" />
+      </RadioGroup>
+
+      <FrameLayout
+          android:id="@+id/dataContainer"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/buttonBarLayout"
+          android:layout_marginLeft="@dimen/activity_vertical_margin"
+          android:layout_marginRight="@dimen/activity_vertical_margin"
+          android:visibility="gone" />
+
+      <ProgressBar
+          android:id="@+id/ProgressBarScreen"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_centerInParent="true"
+          android:background="@drawable/prograssbar_color"
+          android:visibility="invisible">
+
+      </ProgressBar>
+
+      <LinearLayout
+          android:id="@id/buttonBarLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginLeft="@dimen/button_margin"
+          android:layout_marginRight="@dimen/button_margin"
+          android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/hpsimplified"
+            android:padding="2dp"
+            android:text="Copies"
+            android:textColor="#0096D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="-"
+            android:textColor="#9ee6D6"
+            android:textSize="23sp"
+            android:textStyle="bold"></Button>
+
+        <TextView
+            android:id="@+id/integer_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:text="1"
+            android:textColor="#9ee6D6"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="+"
+            android:textColor="#9ee6D6"
+            android:textSize="23sp"
+            android:textStyle="bold"></Button>
+
+
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Back"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/printButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/hpsimplified"
+            android:text="Print"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+      </LinearLayout>
+
+    </RelativeLayout>
+    </HorizontalScrollView>
+  </ScrollView>
+
+</RelativeLayout>

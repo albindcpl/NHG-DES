@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:background="#54898383">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#ff7800"
+            android:text="Connector Details"
+            android:fontFamily="@font/hpsimplified"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:fontFamily="@font/hpsimplified"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:text="Connector Path"
+                android:textColor="#ff7800"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:layout_marginTop="85dp"
+                android:layout_marginRight="2dp"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="130dp"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                android:popupBackground="@android:color/white"
+                android:id="@+id/spProtocol"
+                android:popupElevation="3dp"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+
+                ></Spinner>
+
+            <EditText
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edIpAddress"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="85dp"
+                android:fontFamily="@font/hpsimplified"
+                android:layout_marginRight="5dp"
+                android:hint="Provide path here"
+                android:textColor="#ffb319"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="500"
+                android:paddingLeft="5dp"
+                android:textSize="23sp"
+                android:textStyle="normal" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="95dp"
+                android:fontFamily="@font/hpsimplified"
+                android:layout_marginRight="5dp"
+                android:text="( I.P. Address )"
+                android:textColor="#ffb319"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edFullPath"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="85dp"
+                android:fontFamily="@font/hpsimplified"
+                android:layout_marginRight="5dp"
+                android:text="/S2OB%20Server/s2observer.asmx?wsdl"
+                android:textColor="#ffffff"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="500"
+                android:focusable="false"
+                android:paddingLeft="5dp"
+                android:textSize="23sp"
+                android:textStyle="normal" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:text="Select OnBase User Authentication"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#ff7800"
+                android:textStyle="bold"
+                android:layout_marginTop="180dp"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:id="@+id/llLinearLayout"
+                android:orientation="vertical"
+                android:background="@drawable/settings_background"
+                android:layout_marginTop="250dp"
+                android:visibility="invisible"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="302dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:padding="5dp"
+                    android:text="Domain Name"
+                    android:visibility="visible"
+                    android:id="@+id/tvvDomain"
+                    android:textColor="#ff7800"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/view"
+                    android:background="#CCCCCC" />
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/lvListView"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/vieww"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:layout_width="320dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/hpsimplified"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:id="@+id/edittextDomain"
+                        android:maxLength="100"
+                        android:hint="Enter domain here and click plus (+) icon"
+                        android:textColor="#ffb319"
+                        android:textSize="23sp"
+                        android:textStyle="normal" />
+
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/plus"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/ivPlus"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="2dp"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:id="@+id/radioAD"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Active Directory Authentication"
+                    android:fontFamily="@font/hpsimplified"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="250dp"
+                    android:textColor="#ffb319"
+                    android:checked="false"
+                    android:textSize="20dp" />
+
+
+                <RadioButton
+                    android:id="@+id/radioSA"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Standard OnBase Authentication"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:textColor="#ffb319"
+                    android:checked="false"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="400dp">
+
+                <Button
+                    android:id="@+id/btncancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Cancel"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#ffffff"
+                    android:textSize="23sp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTEST"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Test"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/hpsimplified"
+                    android:paddingBottom="10dp"
+                    android:layout_marginRight="100dp"
+                    android:textColor="#ffffff"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

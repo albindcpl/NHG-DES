@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#54898383">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ff0642bb"
+        android:text="Preview"
+        android:padding="10dp"
+        android:textSize="31sp"
+        android:layout_marginTop="10dp"/>
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#CCCCCC"
+      android:layout_marginTop="70dp"/>
+
+  <com.github.barteksc.pdfviewer.PDFView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/pdfBook1"
+      android:layout_marginTop="70dp">
+  </com.github.barteksc.pdfviewer.PDFView>
+
+  <ProgressBar
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="350dp"
+      android:id="@+id/pbprogressbar"
+      android:layout_marginLeft="200dp"/>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true">
+
+
+    <Button
+        android:id="@+id/btnOptions"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:background="@drawable/rounded_button"
+        android:text="Proceed to Print"
+        android:textStyle="bold"
+        android:textSize="23sp"/>
+
+  </LinearLayout>
+</RelativeLayout>

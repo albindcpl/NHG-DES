@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">取消作业</string>
+    <string name="job_cancel_failed">取消作业失败</string>
+    <string name="job_cancel_success">已成功取消作业</string>
+    <string name="next_page_scan">是否要扫描下一页？</string>
+    <string name="no">否</string>
+    <string name="progress_dialog_title">作业进度</string>
+    <string name="sps_default_progress_text">正在进行中</string>
+    <string name="yes">是</string>
+</resources>

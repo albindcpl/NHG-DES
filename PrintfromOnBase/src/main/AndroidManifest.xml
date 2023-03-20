@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package = "com.dcpl.printfromonbase">
+
+   <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/dcpllogo"
+        android:label="Print from Onbase"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".PreviewActivity"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".TestActivity"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".Admin_Login_Screen" />
+        <activity android:name=".Admin_Credentials_Setup" />
+        <activity android:name=".UserGuideActivity" />
+        <activity android:name=".Admin_Proceed_PopUp" />
+        <activity android:name=".TermsAndConditions" />
+        <activity android:name=".OBConnector_Settings_Screen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".Information_Screen" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Activity2"
+            android:parentActivityName=".OnBase_Login_Screen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".AdminSettingFragmentActivity" />
+        <activity
+            android:name=".OnBase_Login_Screen"
+            android:parentActivityName=".SplashActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

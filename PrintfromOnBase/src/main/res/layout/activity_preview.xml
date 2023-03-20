@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PreviewActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:id="@+id/pdfBook1">
+        </com.github.barteksc.pdfviewer.PDFView>
+
+
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/ProgressBarPreview"
+            android:background="@drawable/prograssbar_color"
+            android:layout_gravity="center"/>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="550dp">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/hpsimplified"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Back"
+                android:layout_gravity="center"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btnPrinted"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:fontFamily="@font/hpsimplified"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Print"
+                android:layout_gravity="center"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

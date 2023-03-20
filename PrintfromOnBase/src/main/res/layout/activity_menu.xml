@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.dcpl.printfromonbase.Information_Screen">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="0dp"
+      android:background="@drawable/back_ground">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:text="Information"
+        android:textColor="#ffffff"
+        android:textSize="31sp"
+        android:textStyle="bold" />
+  </RelativeLayout>
+
+  <ImageView
+      android:layout_width="350dp"
+      android:layout_height="450dp"
+      android:layout_marginLeft="185dp"
+      android:layout_marginTop="180dp"
+      android:src="@drawable/logotwo" />
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginTop="260dp"
+      android:layout_marginLeft="450dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DCPL-Print from OnBase"
+        android:textSize="31sp"
+        android:textColor="#0458a6"
+        android:padding="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0"
+        android:textStyle="normal"
+        android:textColor="#039106"
+        android:textSize="23sp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/web"/>
+
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="https://www.dcplglobal.com/"
+          android:textStyle="normal"
+          android:textSize="23sp"
+          android:textColor="#ff7800"
+          android:layout_marginLeft="2dp"
+          android:padding="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/email"/>
+
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="contact@dcplglobal.com"
+          android:textStyle="normal"
+          android:textSize="23sp"
+          android:textColor="#ff7800"
+          android:layout_marginTop="5dp"
+          android:layout_marginLeft="2dp"
+          android:padding="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/copyrights"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Dee Vee Cloud Programming LLP"
+          android:textStyle="normal"
+          android:textColor="#ff7800"
+          android:textSize="23sp"
+          android:layout_marginTop="5dp"
+          android:layout_marginLeft="2dp"
+          android:padding="5dp"/>
+    </LinearLayout>
+  </LinearLayout>
+
+</RelativeLayout>

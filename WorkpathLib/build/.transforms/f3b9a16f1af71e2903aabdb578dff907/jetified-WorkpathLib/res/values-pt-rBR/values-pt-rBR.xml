@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">Cancelar trabalho</string>
+    <string name="job_cancel_failed">Falha ao cancelar trabalho</string>
+    <string name="job_cancel_success">Trabalho cancelado com sucesso</string>
+    <string name="next_page_scan">Deseja digitalizar a próxima página?</string>
+    <string name="no">Não</string>
+    <string name="progress_dialog_title">Progresso do trabalho</string>
+    <string name="sps_default_progress_text">Em progresso</string>
+    <string name="yes">Sim</string>
+</resources>

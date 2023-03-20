@@ -1,0 +1,3 @@
+include ':PrintfromOnBase', ':JetAdvantageLinkklib', ':WorkpathLib'
+rootProject.name='Print from OnBase'
+include ':myapplication'

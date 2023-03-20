@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+  <TextView
+      android:id="@+id/tvKeyword"
+      android:layout_width="150dp"
+      android:layout_height="match_parent"
+      android:gravity="center_vertical"
+      android:layout_marginTop="5dp"
+      android:fontFamily="@font/hpsimplified"
+      android:layout_marginBottom="5dp"
+      android:textStyle="bold"
+      android:layout_weight="0.5" />
+
+
+  <EditText
+      android:id="@+id/edKeyword"
+      android:layout_width="400dp"
+      android:layout_height="match_parent"
+      android:singleLine="true"
+      android:layout_marginTop="5dp"
+      android:textSize="15sp"
+      android:textStyle="bold"
+      android:fontFamily="@font/hpsimplified"
+      android:layout_marginRight="5dp"
+      android:layout_marginBottom="5dp"
+      android:layout_weight="1.5"
+      android:ems="10" />
+
+</LinearLayout>

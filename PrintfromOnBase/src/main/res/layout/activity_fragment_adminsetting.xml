@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dcpl.printfromonbase.AdminSettingFragmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <fragment
+            android:id="@+id/fragment1"
+           android:name="com.dcpl.printfromonbase.ConnectorFragment"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/connectorandauthenticationfragment" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC" />
+
+
+
+        <FrameLayout
+            android:id="@+id/fragment2"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/admin_background">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_marginTop="15dp"
+            android:id="@+id/ivBackk"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:layout_marginLeft="80dp"
+            android:textColor="#ffffff"
+            android:textSize="31sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/information"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ivMenuBarr"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="20dp"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">Cancelar tarea</string>
+    <string name="job_cancel_failed">Error al cancelar la tarea</string>
+    <string name="job_cancel_success">La tarea se ha cancelado correctamente</string>
+    <string name="next_page_scan">¿Desea escanear la siguiente página?</string>
+    <string name="no">No</string>
+    <string name="progress_dialog_title">Tarea en curso</string>
+    <string name="sps_default_progress_text">En curso</string>
+    <string name="yes">Sí</string>
+</resources>

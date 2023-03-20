@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <PreferenceCategory-->
+<!--        android:key="source_category"-->
+<!--        android:order="1"-->
+<!--        android:title="@string/pref_source">-->
+<!--        <ListPreference-->
+<!--            android:defaultValue="@string/pref_Source_default"-->
+<!--            android:dialogTitle="@string/pref_source"-->
+<!--            android:entries="@array/pref_Source_entries"-->
+<!--            android:entryValues="@array/pref_Source_entries"-->
+<!--            android:key="pref_source"-->
+<!--            android:order="1"-->
+<!--            android:title="@string/pref_source" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        android:key="source_storage_category"-->
+<!--        android:order="2"-->
+<!--        android:title="@string/pref_source_storage">-->
+
+<!--        <Preference-->
+<!--            android:dialogTitle="@string/pref_filename"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_filename"-->
+<!--            android:title="@string/pref_filename" />-->
+
+<!--        <Preference-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_copy_test_page"-->
+<!--            android:layout="@layout/layout_sub_option"-->
+<!--            android:summary="@string/pref_copy_test_page" />-->
+
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        android:key="source_http_category"-->
+<!--        android:order="3"-->
+<!--        android:title="@string/pref_source_http">-->
+
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="@string/pref_uri"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_uri"-->
+<!--            android:title="@string/pref_uri" />-->
+
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="@string/pref_uri_username"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_uri_username"-->
+<!--            android:title="@string/pref_uri_username" />-->
+
+<!--        <EditTextPreference-->
+<!--            android:dialogLayout="@layout/layout_edit_text_password"-->
+<!--            android:dialogTitle="@string/pref_uri_password"-->
+<!--            android:key="pref_uri_password"-->
+<!--            android:title="@string/pref_uri_password" />-->
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        android:key="source_usb_category"-->
+<!--        android:order="3"-->
+<!--        android:title="@string/pref_source_usb">-->
+
+<!--        <ListPreference-->
+<!--            android:dialogTitle="@string/pref_usb_storage"-->
+<!--            android:entries="@array/pref_empty_entries"-->
+<!--            android:entryValues="@array/pref_empty_entries"-->
+<!--            android:key="pref_usb_storage"-->
+<!--            android:title="@string/pref_usb_storage" />-->
+
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="@string/pref_usb_filename"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_usb_filename"-->
+<!--            android:title="@string/pref_usb_filename" />-->
+
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        android:key="source_stream_category"-->
+<!--        android:order="4"-->
+<!--        android:title="@string/pref_source_stream">-->
+
+<!--        <Preference-->
+<!--            android:dialogTitle="@string/pref_stream_filename"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_stream_filename"-->
+<!--            android:title="@string/pref_stream_filename" />-->
+
+<!--        <Preference-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_stream_copy_test_page"-->
+<!--            android:layout="@layout/layout_sub_option"-->
+<!--            android:summary="@string/pref_copy_test_page" />-->
+
+<!--    </PreferenceCategory>-->
+
+    <PreferenceCategory
+        android:order="5"
+        android:title="@string/category_attrs">
+
+        <com.dcpl.printfromonbase.fragments.EditTextIntegerPreference
+            android:defaultValue="1"
+            android:dialogLayout="@layout/layout_edit_text_integer"
+            android:dialogTitle="@string/pref_copies"
+            android:key="pref_copies"
+            android:title="@string/pref_copies" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_color_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_colorMode"
+            android:title="@string/pref_color_mode" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_duplex_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_duplexMode"
+            android:title="@string/pref_duplex_mode" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_autoFit"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_autoFit"
+            android:title="@string/pref_autoFit" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_staple_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_stapleMode"
+            android:title="@string/pref_staple_mode" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_paper_source"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_paperSource"
+            android:title="@string/pref_paper_source" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_paper_size"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_paperSize"
+            android:title="@string/pref_paper_size" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_paper_type"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_paperType"
+            android:title="@string/pref_paper_type" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_auto_value"
+            android:dialogTitle="@string/pref_doc_format"
+            android:entries="@array/pref_auto_entries"
+            android:entryValues="@array/pref_auto_entries"
+            android:key="pref_documentFormat"
+            android:title="@string/pref_doc_format" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_value"
+            android:dialogTitle="@string/pref_collate_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:key="pref_collateMode"
+            android:title="@string/pref_collate_mode" />
+
+<!--        <EditTextPreference-->
+<!--            android:dialogTitle="@string/pref_job_name"-->
+<!--            android:inputType="textNoSuggestions"-->
+<!--            android:key="pref_jobName"-->
+<!--            android:title="@string/pref_job_name" />-->
+
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory-->
+<!--        android:order="5"-->
+<!--        android:title="@string/category_feedback">-->
+<!--        <CheckBoxPreference-->
+<!--            android:defaultValue="true"-->
+<!--            android:key="pref_monitoringJob"-->
+<!--            android:title="@string/pref_monitoring_job" />-->
+<!--        <CheckBoxPreference-->
+<!--            android:defaultValue="true"-->
+<!--            android:key="pref_showJobProgress"-->
+<!--            android:title="@string/pref_show_job_progress" />-->
+<!--        <CheckBoxPreference-->
+<!--            android:defaultValue="false"-->
+<!--            android:key="pref_showSettings"-->
+<!--            android:title="@string/pref_show_settings" />-->
+<!--    </PreferenceCategory>-->
+
+</PreferenceScreen>

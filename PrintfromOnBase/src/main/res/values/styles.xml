@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ff7800</item>
+        <item name="colorPrimaryDark">#ff7800</item>
+        <item name="colorAccent">#ff7800</item>
+    </style>
+    <style name="ShapeAppearance.Corner.Small" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerSize">4dp</item>
+    </style>
+
+
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="colorControlNormal">#ff7800</item>
+        <item name="colorControlActivated">#ff7800</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="colorBackgroundFloating">#ff7800</item>
+        <item name="android:colorBackgroundCacheHint">#ff7800</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!-- Floating label appearance here -->
+        <item name="android:textColor">#ff7800</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="AppTheme.Tex" parent="TextAppearance.Design.Counter">
+        <!-- Error message appearance here -->
+        <item name="android:textColor">#ff7800</item>
+    </style>
+
+    <style name="AppTheme.Text" parent="TextAppearance.Design.Counter">
+        <!-- Error message appearance here -->
+        <item name="android:textColor">#ff7800</item>
+    </style>
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+
+</resources>

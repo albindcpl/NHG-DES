@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">Auftrag abbrechen</string>
+    <string name="job_cancel_failed">Auftrag konnte nicht abgebrochen werden</string>
+    <string name="job_cancel_success">Auftrag wurde erfolgreich abgebrochen</string>
+    <string name="next_page_scan">Möchten Sie die nächste Seite scannen?</string>
+    <string name="no">Nein</string>
+    <string name="progress_dialog_title">Auftrags-Fortschritt</string>
+    <string name="sps_default_progress_text">In Bearbeitung</string>
+    <string name="yes">Ja</string>
+</resources>

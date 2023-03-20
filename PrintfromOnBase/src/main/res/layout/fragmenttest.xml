@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin = "20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:padding="5dp"
+                android:fontFamily="@font/hpsimplified"
+                android:background="#ff7800"
+                android:text="Connector Path"
+                android:textColor="#ffffff"
+                android:textSize="23sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:id="@+id/edProtocolCP"
+                android:popupElevation="3dp"
+                android:background="#ffcc66"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#ffffff"
+                android:textSize="23sp"
+                android:textStyle="normal"
+                android:focusable="false"
+                android:padding="5dp"
+                ></EditText>
+
+            <EditText
+                android:id="@+id/edCP"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autofillHints="#ffffff"
+                android:layout_marginTop="3dp"
+                android:background="#ffcc66"
+                android:inputType="text"
+                android:focusable="false"
+                android:singleLine="true"
+                android:maxLength="1000"
+                android:padding="5dp"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#ffffff"
+                android:textSize="23sp"
+                android:textStyle="normal"
+                />
+            <EditText
+                android:id="@+id/edFP"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autofillHints="#ffffff"
+                android:layout_marginTop="3dp"
+                android:background="#ffcc66"
+                android:inputType="text"
+                android:layout_marginRight="30dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:maxLength="1000"
+                android:padding="5dp"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#ffcc66"
+                android:textSize="23sp"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="150dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:padding="5dp"
+                android:background="#ff7800"
+                android:fontFamily="@font/hpsimplified"
+                android:text="Username"
+                android:textColor="#ffffff"
+                android:textSize="23sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/edUname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="#ffffff"
+                android:layout_marginTop="1dp"
+                android:background="#ffcc66"
+                android:inputType="text"
+                android:layout_marginRight="30dp"
+                android:singleLine="true"
+                android:padding="5dp"
+                android:fontFamily="@font/hpsimplified"
+                android:textColor="#ffffff"
+                android:maxLength="50"
+                android:textSize="23sp"
+                android:textStyle="normal"
+                android:textColorHint="#ffffff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:padding="5dp"
+                android:background="#ff7800"
+                android:text="Password"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/hpsimplified"
+                android:textSize="23sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/edP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="#ffffff"
+                android:layout_marginTop="1dp"
+                android:background="#ffcc66"
+                android:inputType="textPassword"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/hpsimplified"
+                android:singleLine="true"
+                android:padding="5dp"
+                android:textColor="#ffffff"
+                android:maxLength="50"
+                android:textSize="23sp"
+                android:textStyle="normal"
+                android:textColorHint="#ffffff"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+
+        >
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/admin_background"
+            android:text="Close"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/hpsimplified"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+
+        <Button
+            android:id="@+id/buttonTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/admin_background"
+            android:text="Test"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/hpsimplified"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

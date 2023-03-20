@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">Отменить задание</string>
+    <string name="job_cancel_failed">Не удалось отменить задание</string>
+    <string name="job_cancel_success">Задание отменено</string>
+    <string name="next_page_scan">Сканировать следующую страницу?</string>
+    <string name="no">Нет</string>
+    <string name="progress_dialog_title">Ход выполнения задания</string>
+    <string name="sps_default_progress_text">Выполняется</string>
+    <string name="yes">Да</string>
+</resources>

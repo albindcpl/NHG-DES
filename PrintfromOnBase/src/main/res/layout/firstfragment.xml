@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#54898383">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#0096D6"
+        android:text="Query"
+        android:fontFamily="@font/hpsimplified"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:textSize="18sp"
+        />
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#CCCCCC" />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="520dp"
+      android:layout_margin = "10dp"
+      android:orientation="vertical"
+      android:background="@drawable/import_background"
+      android:focusableInTouchMode="true"
+      >
+
+    <TextView
+        android:id="@+id/tvDTG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:fontFamily="@font/hpsimplified"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="Document Type Group"
+        android:textColor="#0096D6"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spSpinnerDTG"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignBottom="@+id/tvDTG"-->
+    <!--        android:layout_marginLeft="2dp"-->
+    <!--        android:scrollbars="vertical"-->
+    <!--        android:fadeScrollbars="false"-->
+    <!--        android:layout_marginBottom="-28dp" />-->
+
+    <Spinner
+        android:id="@+id/spSpinnerDTG"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:background="@drawable/spinner_bg"
+        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+        android:popupBackground="@android:color/white"
+        android:popupElevation="3dp"
+        android:stateListAnimator="@drawable/spinner_sla"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="25dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="80dp"
+        android:background="#CCCCCC" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="240dp"
+        android:background="#CCCCCC" />
+
+
+    <TextView
+        android:id="@+id/tvDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="243dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Document Type"
+        android:fontFamily="@font/hpsimplified"
+        android:layout_marginRight="5dp"
+        android:textColor="#0096D6"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="255dp"
+        style="@style/Widget.AppCompat.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:background="@drawable/spinner_bg"
+        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+        android:popupBackground="@android:color/white"
+        android:id="@+id/spSpinnerDT"
+        android:popupElevation="3dp"
+        android:stateListAnimator="@drawable/spinner_sla"
+        ></Spinner>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="70dp"
+        android:id="@+id/rvRecyclerView"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keyword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="#0096D6"
+        android:fontFamily="@font/hpsimplified"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/import_background"
+          android:layout_marginBottom="5dp"
+          android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:fontFamily="@font/hpsimplified"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Full Text"
+            android:textColor="#0096D6" />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/edFullTextSearch"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/hpsimplified"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"/>
+
+      </LinearLayout>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true">
+
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:fontFamily="@font/hpsimplified"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Clear"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btnFind"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:fontFamily="@font/hpsimplified"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Find"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+  </LinearLayout>
+
+</LinearLayout>

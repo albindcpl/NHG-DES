@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#54898383">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#0096D6"
+        android:text="Document List"
+        android:fontFamily="@font/hpsimplified"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:textSize="18sp"
+        />
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#CCCCCC" />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="520dp"
+      android:layout_margin= "10dp"
+      android:orientation="vertical"
+      android:background="@drawable/import_background"
+      android:focusableInTouchMode="true"
+      >
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
+    </ListView>
+    <!--            android:layout_marginBottom="150dp" />-->
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/pbProgressBar"
+        android:visibility="invisible"
+        android:background="@drawable/prograssbar_color"
+        android:layout_gravity="center"/>
+
+  </RelativeLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true">
+
+    <Button
+        android:id="@+id/btnPreview"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:fontFamily="@font/hpsimplified"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Preview"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btnOption"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:fontFamily="@font/hpsimplified"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Setting"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/hpsimplified"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Print"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+  </LinearLayout>
+</LinearLayout>

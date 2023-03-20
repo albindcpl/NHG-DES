@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_job">Cancel Job</string>
+    <string name="connection_dialog_message">Connecting to %1$s</string>
+    <string name="connection_dialog_title">Please wait…</string>
+    <string name="credentials_dialog_password">Password</string>
+    <string name="credentials_dialog_required">Required</string>
+    <string name="credentials_dialog_title">Please enter device credentials:</string>
+    <string name="credentials_dialog_username">User name</string>
+    <string name="job_cancel_failed">Job Cancel Failed</string>
+    <string name="job_cancel_success">Canceled Job Successfully</string>
+    <string name="next_page_scan">Do you want to scan the next page?</string>
+    <string name="no">No</string>
+    <string name="progress_dialog_title">Job progress</string>
+    <string name="sps_default_progress_text">Progressing</string>
+    <string name="yes">Yes</string>
+</resources>
