@@ -266,7 +266,7 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
                         password.requestFocus();
                     }
                     else {
-                        // Save the input data to SharedPreferences
+                        // Save the input data to SharedPreferences in Mypref
                         saveData();
                         // Start a new activity
                         Intent intent = new Intent(getApplicationContext(), Admin_Proceed_PopUp.class);

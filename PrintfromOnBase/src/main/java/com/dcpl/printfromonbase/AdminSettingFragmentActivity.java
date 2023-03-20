@@ -89,13 +89,11 @@ public class AdminSettingFragmentActivity extends AppCompatActivity {
         // onClick method. When the imageVieww is clicked, this onClick method will be called
         imageVieww.setOnClickListener(new View.OnClickListener() {
 
+
+
             //Inside the onClick method, an Intent object is created that specifies the Information_Screen activity to be started.
             // The getApplicationContext() method is used to get the application context, and the startActivity method is called on the
             // Intent object to start the activity. This will switch to the Information_Screen activity.
-
-
-
-
             @Override
             public void onClick(View v) {
 

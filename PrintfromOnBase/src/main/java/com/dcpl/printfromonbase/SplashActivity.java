@@ -62,11 +62,15 @@
 
 
 //Updated Splash Activity 25-02-2023
-/** this code sets up an activity that displays the splash activity
+/** this code sets up an activity that displays the splash activity, Which open on clicking the application icon
   Its purpose is to display a splash screen for a set amount of time
  and then navigate to one of three activities depending on
  whether the end user has approved the End User License Agreement (EULA)
  and whether the admin username and password have been saved.
+ */
+
+/**This line of code mentionw the app name and the dom
+ *
  */
 package com.dcpl.printfromonbase;
 

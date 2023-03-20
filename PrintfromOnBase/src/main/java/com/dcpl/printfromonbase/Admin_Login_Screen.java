@@ -12,7 +12,7 @@
 
 package com.dcpl.printfromonbase;
 
-//Refer to Splash activity for explanation about each imports
+//Refer to Splash activity and Admin_Credentials_Setup for explanation about each imports
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;

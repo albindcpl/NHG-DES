@@ -1,5 +1,5 @@
 package com.dcpl.printfromonbase;
-
+//This activity is popup screen that comes after setting admin credentials and when the user wishes to set configuration with that the backend application
 // This statement imports the Context class from the android.content package, which is part of the Android SDK.
 // The Context class represents the current state of an Android application and provides access to various
 // application-specific information, such as resources, services, and preferences.
