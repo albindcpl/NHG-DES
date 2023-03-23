@@ -27,6 +27,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * This activity is implementing a screen for the admin settings. It sets a flag to prevent screenshots and
+ * screen recording, sets a layout for the activity, finds the ImageView and TextView views, and sets a click
+ * listener on the ImageView to navigate to another activity when clicked. It also sets a click listener on
+ * another ImageView to navigate to a different activity when clicked.
+ */
 
 public class AdminSettingFragmentActivity extends AppCompatActivity {
 

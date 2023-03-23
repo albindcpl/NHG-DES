@@ -1,4 +1,4 @@
-/**
+/**This java activity enables the user to log into the admin side of the application
  * "Admin_Login_Screen" that represents a login screen for an administrative user. The activity contains
  * UI elements such as EditTexts for the username and password, a button to initiate the login process,
  * and an ImageView that can be clicked to autofill the username and password fields with previously saved values.

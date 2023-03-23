@@ -29,21 +29,66 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 
+
+//This import statement brings in the PrintConfigureFragment class from the com.dcpl.printfromonbase.fragments package.
 import com.dcpl.printfromonbase.fragments.PrintConfigureFragment;
+
+//This import statement brings in the InitializationTask class from the com.dcpl.printfromonbase.task package.
 import com.dcpl.printfromonbase.task.InitializationTask;
+
+//This import statement brings in the WebService_GetSA_CloseSession class from the com.dcpl.printfromonbase.task.package.
 import com.dcpl.printfromonbase.task.WebService_GetSA_CloseSession;
+
+//This import statement brings in the WebService_GetSA_Document class from the com.dcpl.printfromonbase.task.package
 import com.dcpl.printfromonbase.task.WebService_GetSA_Document;
+
+/**
+ * It provides a lightweight feedback mechanism to display a brief message at the bottom of the screen.
+ * It is typically used to inform the user of a successful or unsuccessful operation, or to provide contextual information.
+ * Snackbar is similar to a Toast message, but with additional functionality such as action buttons and support for swiping to dismiss.
+ */
 import com.google.android.material.snackbar.Snackbar;
+
+/**
+ * This import statement is importing the CapabilitiesExceededException class from the com.hp.workpath.api package.
+ * This exception is thrown when a print job exceeds the capabilities of the printer, such as maximum print resolution or media size.
+ */
 import com.hp.workpath.api.CapabilitiesExceededException;
+
+//used to represent the result of a Workpath API operation
 import com.hp.workpath.api.Result;
+
+//this class throws checked exception thrown by HP Workpath API when the device does not support the sdk
 import com.hp.workpath.api.SsdkUnsupportedException;
+
+//imports workpath class method that provides methods for working with HP printers and other devices that support the Workpath API.
 import com.hp.workpath.api.Workpath;
+
+//This class is used to represent information about a print job in the Workpath API.
 import com.hp.workpath.api.job.JobInfo;
+
+//This class is used to interact with the Job Service in the Workpath API, which allows you to submit, monitor,
+// and manage print jobs on compatible printers.
 import com.hp.workpath.api.job.JobService;
+
+//It contains attributes for a joblet, which is a smaller unit of a job.
+// A joblet is a set of print parameters that can be grouped together to form a job.
 import com.hp.workpath.api.job.JobletAttributes;
+
+//PrintAttributes class which is used to specify the attributes of a print job, such as the number of copies,
+// duplex mode, and paper size.
 import com.hp.workpath.api.printer.PrintAttributes;
+
+//represents the capabilities of a printer. It provides information about the supported attributes and
+// their possible values that can be used for printing with a specific printer model.
 import com.hp.workpath.api.printer.PrintAttributesCaps;
+
+//provides methods for interacting with printers on the Workpath platform.
 import com.hp.workpath.api.printer.PrinterService;
+
+// It contains attributes that describe a printlet (a print job sent to a printer).
+// By setting the various attributes on a PrintletAttributes object,
+// developers can customize the print job before sending it to the printer.
 import com.hp.workpath.api.printer.PrintletAttributes;
 
 

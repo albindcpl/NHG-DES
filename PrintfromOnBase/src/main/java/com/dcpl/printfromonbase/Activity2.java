@@ -1,5 +1,13 @@
 package com.dcpl.printfromonbase;
 
+/**
+ * The Following code defines an activity called Activity2. This activity displays a list of items and allows the user to
+ * download a file related to the selected item. The activity reads a JSON file called Form.json to obtain
+ * the list of items and other related information such as the document ID and the image ID.
+ * It uses a custom adapter called MyAdapter to display the list of items in a ListView.
+ */
+
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -62,7 +70,7 @@ public class Activity2 extends AppCompatActivity {
         addAdapter();
 
     }
-
+//configProperties(): Reads the config.properties file from the assets folder to get the SOAP endpoint address and login credentials.
     private void configProperties() {
         try {
             InputStream stream = this.getAssets().open("config.properties");
@@ -77,6 +85,8 @@ public class Activity2 extends AppCompatActivity {
         }
     }
 
+
+    //getFiles(): Reads the Form.json file from the assets folder and extracts the necessary data to populate the ListView.
     private void getFiles() {
 
         try {
@@ -123,7 +133,7 @@ public class Activity2 extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+//addAdapter(): Sets up the adapter for the ListView.
     public void addAdapter() {
 
         MyAdapter adapter = new MyAdapter(Activity2.this, mRow, mImage);
@@ -142,6 +152,8 @@ public class Activity2 extends AppCompatActivity {
         });
     }
 
+
+    //checkTitle(): Retrieves the title of the activity from the intent and sets the title of the activity accordingly.
     private void checkTitle() {
         Intent intent = getIntent();
         title = intent.getStringExtra("Title");
@@ -153,6 +165,9 @@ public class Activity2 extends AppCompatActivity {
         }
     }
 
+
+
+    //MyAdapter(): An adapter class that extends the ArrayAdapter class to bind the data to the ListView.
     class MyAdapter extends ArrayAdapter<String> {
 
         Context context;
@@ -167,6 +182,7 @@ public class Activity2 extends AppCompatActivity {
             this.rImages = aImage;
         }
 
+        //getView(): Inflates the row view for each item in the ListView and populates it with the necessary data.
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -180,6 +196,9 @@ public class Activity2 extends AppCompatActivity {
         }
     }
 
+
+    //DownloadFileTask(): An AsyncTask class that downloads a document related to the selected item in the ListView.
+    // The SOAP endpoint address and login credentials are passed as parameters to the download function.
     private class DownloadFileTask extends AsyncTask<Void, Void, DownloadService.WSResult> {
 
         private final WeakReference<Activity2> mContextRef;
@@ -197,6 +216,14 @@ public class Activity2 extends AppCompatActivity {
             return wsResult;
         }
 
+
+        /**The following is a method called onPostExecute with a parameter wsResult of type DownloadService.WSResult.
+
+        The method first gets the docName value from wsResult and checks if it is not empty.
+         If it's not empty, a toast message is created with the message from wsResult and shown at the center of the screen.
+         Otherwise, a toast message is created with wsResult status and message, concatenated together, and also shown at
+         the center of the screen.
+         */
         @Override
         protected void onPostExecute(DownloadService.WSResult wsResult) {
             super.onPostExecute(wsResult);

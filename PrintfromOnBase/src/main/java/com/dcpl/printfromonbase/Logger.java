@@ -24,6 +24,13 @@ public class Logger {
     private static final String _EQ = "=";
     private static final String _NF = (BuildConfig.DEBUG) ? "\n" : "";
 
+
+    /**line 34-52
+     * This code defines a method called "build" that takes a PrintAttributesCaps object and returns a
+     * formatted string containing information about the printer's capabilities. If the input object is null,
+     * the method returns null. Otherwise, the method constructs a StringBuilder object and appends each
+     * capability to the string in a specific format. Finally, the method returns the resulting string.
+     */
     public static String build(PrintAttributesCaps caps) {
         if (caps != null) {
             StringBuilder logBuilder = new StringBuilder();
@@ -44,6 +51,14 @@ public class Logger {
         return null;
     }
 
+
+    /**Line 62-83
+     *This code defines a static method called "build" that takes a PrintAttributes object and returns a
+     * formatted string containing information about the print job's attributes. If the input object is null,
+     * the method returns null. Otherwise, the method constructs a PrintAttributesReader object to read the
+     * attributes and constructs a StringBuilder object to append each attribute to the string in a specific format.
+     * Finally, the method returns the resulting string.
+     */
     public static String build(PrintAttributes attributes) {
         if (attributes != null) {
             PrintAttributesReader reader = new PrintAttributesReader(attributes);
@@ -98,6 +113,25 @@ public class Logger {
         return null;
     }
 
+
+    /**Line 135-167
+     *This code defines a static method build that takes a JobInfo object as input and returns a string
+     * that represents the job information in a formatted way. The method first checks if the input is not null,
+     * and then initializes a StringBuilder object to create the formatted string.
+     *
+     * The formatted string consists of a start tag, followed by a series of name-value pairs, and an end tag.
+     * Each name-value pair is represented as a nested start tag, followed by the name of the attribute,
+     * followed by an equals sign, and then the value of the attribute. The pair is closed with a closing tag.
+     * Each pair is separated by a comma.
+     *
+     * The name-value pairs include jobId, jobName, jobType, owner, startTime, and completeTime.
+     * If the jobType is PRINT, additional name-value pairs are added that represent the print job data,
+     * such as sheetsPrinted, impressionsPrinted, copies, duplex, and source. If the PrintJobData object contains a
+     * PrintJobState object, the state value is also included.
+     *
+     * The formatted string is then returned, or null if the input is null.
+     *
+     */
     public static String build(JobInfo jobInfo) {
         if (jobInfo != null) {
             StringBuilder logBuilder = new StringBuilder();

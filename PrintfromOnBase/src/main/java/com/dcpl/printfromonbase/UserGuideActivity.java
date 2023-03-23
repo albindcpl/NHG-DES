@@ -12,6 +12,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
+/**
+ * This is an Android Activity class that displays a user guide in the form of a PDF document using a
+ * third-party library called "PDFView". The PDF document is stored in the app's assets folder and is loaded into
+ * the PDFView using the "fromAsset" method.
+ *
+ * The class extends the AppCompatActivity class and overrides its onCreate method, which is called when
+ * the activity is created. In the onCreate method, the activity layout is set using the setContentView method,
+ * and the PDFView is initialized and loaded with the PDF document.
+ *
+ * The class also contains a method called hideKeyboardFrom, which takes a context and a view as parameters
+ * and uses the InputMethodManager to hide the soft keyboard from the specified view.
+ *
+ * In addition, the class sets a flag on the window to prevent the user from taking screenshots or
+ * recording the screen while the activity is visible.
+ *
+ * Finally, the class contains an OnClickListener for an ImageView, which when clicked, navigates
+ * the user back to the OnBase_Login_Screen activity by creating a new intent and starting the activity.
+ */
 
 public class UserGuideActivity extends AppCompatActivity {
     PDFView pdfView;

@@ -1,5 +1,5 @@
 package com.dcpl.printfromonbase;
-
+// The following activity bases the behaviour of the connector fragment available to the admin after login
 //Refer to splash activity from explanation about these imports
 import android.os.Bundle;
 import android.view.LayoutInflater;

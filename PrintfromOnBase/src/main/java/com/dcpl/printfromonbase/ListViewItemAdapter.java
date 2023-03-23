@@ -19,6 +19,32 @@ import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
 
+
+/**
+ * This is an adapter class for a RecyclerView in an Android application. The RecyclerView displays a list of items,
+ * where each item represents a queue for scanning. The adapter class extends the RecyclerView.Adapter class and is
+ * responsible for creating and binding the views for each item in the list.
+ *
+ * The class contains a constructor that takes an ArrayList of Strings, which represents the list of
+ * queues to be displayed. It also contains a static OnItemClickListener interface and a static SparseBooleanArray
+ * for keeping track of selected items.
+ *
+ * The onCreateViewHolder method inflates the layout for each item in the list using the LayoutInflater and
+ * returns a ViewHolder object that holds references to the views in the layout.
+ *
+ * The onBindViewHolder method binds the data for each item to its corresponding view. It sets the text of
+ * the TextView in the layout to the queue name and also sets an OnClickListener on the LinearLayout that
+ * represents the item. When an item is clicked, the position of the item is stored in the "row_index" variable,
+ * and the adapter is notified that the data has changed. This causes the view to be redrawn, highlighting the selected item.
+ *
+ * The getItemCount method returns the number of items in the list.
+ *
+ * The setOnItemListener method sets the OnItemClickListener for the adapter.
+ *
+ * The ViewHolder class holds references to the views in the layout for each item.
+ * It also contains a bind method that sets an OnClickListener on the item view and calls the onItemClick method
+ * of the OnItemClickListener when the item is clicked.
+ */
 public class ListViewItemAdapter extends RecyclerView.Adapter<ListViewItemAdapter.ViewHolder> {
 
     public static ArrayList<String>scanqueuelist = new ArrayList<>();

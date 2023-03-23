@@ -276,6 +276,21 @@ public class Fragment_DocType extends Fragment {
 //            return v;
 //        }
 //       else{
+
+    /**Line 294-404
+     * This is a block of Java code written in the Android framework. It seems to be defining a fragment that displays a
+     * list of documents with filters and search functionality.
+     *
+     * The code initializes various UI components such as spinners, a RecyclerView, and buttons.
+     * It also creates an adapter for the RecyclerView and sets it as the adapter for the RecyclerView.
+     *
+     * The code also defines event listeners for the spinners and buttons. When the user selects an
+     * item in the DocTypeGroup spinner, it updates the list of document types based on the selected DocTypeGroup.
+     * When the user clicks the Find button, it retrieves a list of documents based on the selected filters and search text.
+     *
+     * Overall, this code seems to be defining the UI and functionality for a fragment that displays a
+     * list of documents and allows the user to filter and search for specific documents.
+     */
     SessionID = FragmentActivity.sessionID;
     doctypegrouplist.add("All");
     alldoctypelist.add("All");
@@ -386,8 +401,26 @@ public class Fragment_DocType extends Fragment {
           SelectedDocTypeGroup = spinner_DTG.getSelectedItem().toString();
           SelectedDTG=SelectedDocTypeGroup;
           new DTLWS(Fragment_DocType.this).execute();
-        }
+        }//
 
+
+        /**Line 424-514
+         * This is a Java code snippet for an Android application that includes a class named Fragment_DocType.
+         * The code includes a method named onCreateView(), which inflates a layout file and initializes various UI
+         * components like Spinners and Adapters.
+
+         The code sets up two Spinner components named spinner_DTG and spinner_dt.
+         These Spinners have drop-down views, which show options in a list format.
+         The Spinners are also initialized with ArrayAdapters that provide data to the Spinners.
+
+         The code also sets up OnItemSelectedListener callbacks for both Spinners,
+         which get triggered when an item is selected from the Spinners. These callbacks perform some operations
+         based on the selected item. For example, if the selected item is "All", some lists are cleared and adapters are updated.
+
+         The code also includes two nested classes named DTGLWS and DTALWS that extend AsyncTask.
+         These classes perform some background operations related to web services, and provide results to the main UI thread.
+         *
+         */
         ArrayAdapter aa_dt = new ArrayAdapter<String>(getActivity(), R.layout.spinner_dtg, alldoctypelist);
         aa_dt.setDropDownViewResource(R.layout.spinner_dtg);
         spinner_dt.setAdapter(aa_dt);
@@ -478,8 +511,31 @@ public class Fragment_DocType extends Fragment {
 
     DTALWS(final Fragment_DocType context) {
       this.mContextRef = new WeakReference<>(context);
-    }
+    }//
 
+
+    /**Line 540-636
+     * The code  contains three inner classes that extend the AsyncTask class.
+     * The AsyncTask class is used in Android to perform background tasks and update the UI.
+     *
+     * The first inner class is ATLWS and overrides the doInBackground method,
+     * which performs a web service call to retrieve a list of all document types. It then adds
+     * the list to an ArrayList called alldoctypelist. The onPostExecute method is not overridden in this class.
+     *
+     * The second inner class is DTLWS and also overrides the doInBackground method
+     * to perform a web service call to retrieve a list of document types for a selected group.
+     * It adds the list to the alldoctypelist. In the onPostExecute method, it calls notifyDataSetChanged on a
+     * keyword_adapter, which suggests that it is updating a UI component.
+     *
+     * The third inner class is KWLWS and overrides the doInBackground method to perform a web service
+     * call to retrieve a list of keywords for a selected document type. It then updates several ArrayLists and a HashMap.
+     * In the onPostExecute method, it clears the kwnamelist, kwdatatypelist, kwdetailslist, keywordtypenamelist,
+     * and edittextlist and then adds data to these lists based on the results of the web service call.
+     * It then calls notifyDataSetChanged on a keyword_adapter, which again suggests that it is updating a UI component.
+     *
+     * Overall, these inner classes are used to perform web service calls in the background and update UI components with the results.
+     *
+     */
     @Override
     protected WebService_GetSA_AllDocTypeList.WSResult doInBackground(Void... voids) {
       WebService_GetSA_AllDocTypeList WSADTL = new WebService_GetSA_AllDocTypeList();
@@ -577,7 +633,7 @@ public class Fragment_DocType extends Fragment {
 
     }
 
-  }
+  }//till here
 
   class DWS extends AsyncTask<Void, Void, WebService_GetSA_DocList.WSResult> {
 

@@ -32,6 +32,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+
+/**Line 54-122
+ * This is an implementation of a RecyclerView adapter class called "FirstFragmentAdapter".
+ * It is used to bind data to the individual items in the RecyclerView.
+ *
+ * The constructor of this class takes three ArrayLists of String as parameters: "name", "dataType", and "details".
+ * These arrays contain the data that will be displayed in the RecyclerView.
+ *
+ * In the onCreateViewHolder() method, the adapter inflates a layout file named "list_item" and returns a new ViewHolder object.
+ *
+ * In the onBindViewHolder() method, the adapter sets the values for the views in the ViewHolder based on
+ * the position of the item in the RecyclerView. It sets the text of a TextView with the keyword name at the given position,
+ * sets the hint text and input type of an EditText based on the data type of the keyword, and sets an
+ * OnClickListener to open a DatePickerDialog when the EditText is clicked for a keyword with a data type of "Date".
+ * t also sets any previously entered text in the EditText from the edittextlist HashMap at the current position.
+ *
+ * The edittextlist HashMap is a static field that is used to store any text that the user has entered in an EditText at a
+ * particular position. This is used to restore the entered text if the user scrolls away from the EditText and then scrolls back to it.
+ */
 public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdapter.MyViewholder>{
 
     private static final String TAG = "";
@@ -100,9 +119,31 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
 
                             holder.edKeywordValue.setText(sdf.format(myCalendar.getTime()));
 
-                        }
+                        }//
 
                     };
+
+                    /** Line 148-213
+                     * This code is implementing the onBindViewHolder() method of a RecyclerView Adapter in Android.
+                     *The onBindViewHolder() method is responsible for setting up the views for each item in the RecyclerView.
+                     *In this code, the method is first setting the keyword name and color for each item in the list by getting
+                     * the values from the corresponding ArrayLists.
+                     *
+                     * It then checks the data type of the keyword and sets up the EditText view accordingly.
+                     * For example, if the data type is "Numeric9" or "Numeric20", it sets the input type to numeric and sets a
+                     * maximum length filter based on the value in the keyword details list.
+                     *
+                     * If the data type is "Date", it sets a hint for the expected format and sets up a
+                     * DatePickerDialog to allow the user to select a date.
+                     *
+                     * If the data type is "DateTime", it sets a hint for the expected format and sets up a
+                     * DatePickerDialog and a TimePickerDialog to allow the user to select a date and time.
+                     *
+                     * If the data type is "Currency", it sets the input type to decimal and sets a hint for an example format.
+                     * It also sets up a TextWatcher to validate the input and display an error message if the input is
+                     * not in the expected format.
+                      */
+
 
                     holder.edKeywordValue.setOnClickListener(new View.OnClickListener() {
 
@@ -169,7 +210,7 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
                                 holder.edKeywordValue.setError("Invalid Format !!!");
                             }
 
-                        }
+                        }//
 
                         @Override
                         public void afterTextChanged(Editable s) {
@@ -198,7 +239,17 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
                     holder.edKeywordValue.setFilters(new InputFilter[]{new InputFilter.LengthFilter(Integer.parseInt(keyworddetailsList.get(position)))});
 //                    holder.ivImageView.setVisibility(View.INVISIBLE);
                     break;
-
+/**Line 253-275
+ * This code snippet is part of an Android application that sets up the input fields based on the type of data expected from the user.
+ *
+ * This specific case handles the "FloatingPoint" data type. It sets the input type to accept decimal numbers,
+ * limits the maximum length of input based on the value provided in the keyworddetailsList, and adds a text watcher
+ * to validate the user's input.
+ *
+ * The validation checks if the entered text matches the regular expression pattern "[-+]?[0-9]*\.?[0-9]+",
+ * which represents a floating-point number with an optional sign and decimal point. If the input is invalid,
+ * an error message is displayed using holder.edKeywordValue.setError()
+ */
                 case "FloatingPoint":
                     holder.edKeywordValue.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
                     holder.edKeywordValue.setHint("Float (Max: " + keyworddetailsList.get(position) + ")");
@@ -221,7 +272,7 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
                                 holder.edKeywordValue.setError("Invalid Format !!!");
                             }
 
-                        }
+                        }//
 
                         @Override
                         public void afterTextChanged(Editable s) {
@@ -239,7 +290,14 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
                         }
                     });
                     break;
-
+/**
+ * This code block is responsible for setting up an input field for a specific currency type.
+ * The hint text is set to show an example of the specific currency type expected. The input field is set to
+ * listen for text changes and validate the input based on a regular expression pattern.
+ * The regular expression pattern matches any number with or without commas that has one or two decimal places.
+ * If the input matches the pattern, the validation succeeds and prints "yes" to the console.
+ * Otherwise, the validation fails and an error message is displayed in the input field.
+ */
                 case "SpecificCurrency":
                     holder.edKeywordValue.setHint("Currency (Example: " + keyworddetailsList.get(position) + ")");
 //                        holder.ivImageView.setVisibility(View.INVISIBLE);
@@ -261,7 +319,7 @@ public class FirstFragmentAdapter extends RecyclerView.Adapter<FirstFragmentAdap
                                 holder.edKeywordValue.setError("Invalid Format !!!");
                             }
 
-                        }
+                        }//
 
                         @Override
                         public void afterTextChanged(Editable s) {

@@ -69,7 +69,7 @@
  and whether the admin username and password have been saved.
  */
 
-/**This line of code mentionw the app name and the dom
+/**This line of code mentions the app name and the domain name that we choose while making a new project
  *
  */
 package com.dcpl.printfromonbase;

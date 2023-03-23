@@ -1,4 +1,5 @@
-/** this code sets up an activity that displays the terms and conditions of using the app,
+/** This is the EULA Activity
+ * this code sets up an activity that displays the terms and conditions of using the app,
  and prompts the user to either accept or decline them.
  Declare UI elements and dialog builder
  Set the UI layout for the activity

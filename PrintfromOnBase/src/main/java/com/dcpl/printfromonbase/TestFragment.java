@@ -38,7 +38,15 @@ import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
 
-
+/**
+ * This is a Java code for an Android application's Fragment.
+ * The onCreateView method is responsible for inflating the fragment's layout and initializing its UI components.
+ * The fragment displays a form to enter the username and password, and a button to test
+ * the connectivity to a web service using the provided credentials. The LoginWS and CloseWS are two private
+ * AsyncTask classes that handle the web service login and logout process respectively, which are triggered
+ * when the test button is clicked. The login result is displayed as a toast message, and the fragment is
+ * finished after a successful login.
+ */
 public class TestFragment extends Fragment {
 
     public static EditText edConnectorPath;

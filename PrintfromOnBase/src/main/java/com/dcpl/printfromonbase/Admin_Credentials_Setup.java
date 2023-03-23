@@ -159,7 +159,7 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/**Set secure flag to prevent screenshots
+/**Set secure flag to prevent screenshots and screen recordings
  This is done using the getWindow() method to get the window
  associated with the activity, and then calling the setFlags() method on that window
  to set the secure flag.*/
