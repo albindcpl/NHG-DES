@@ -76,7 +76,7 @@ public class WebService_GetAD_Login {
             request.addProperty(propDomain);
 
             httpTransport.call(SOAP_ACTION.concat(SOAP_METHOD), envelope);
-            HttpsTrustManager.allowAllSSL();
+            //HttpsTrustManager.allowAllSSL();
 
             SoapObject soapResponse = (SoapObject) envelope.getResponse();
             LoginResult = soapResponse.getProperty("loginresponse").toString();

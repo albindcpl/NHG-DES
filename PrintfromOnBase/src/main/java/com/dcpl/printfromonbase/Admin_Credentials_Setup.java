@@ -27,73 +27,26 @@ package com.dcpl.printfromonbase;
  * that your app has a consistent look and feel across different versions of Android.
  */
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
 
-/**
- *The line of code "import android.content.Intent;" imports the Intent class from the android.content
- * package into the current Java file. This allows the Java code to use the Intent class and create new
- * Intents, which are objects that facilitate communication between different components of an Android app,
- * such as starting a new activity or service.
- */
 import android.content.Intent;
 
-/**The line of code "import android.content.SharedPreferences;" imports the SharedPreferences interface
- * from the android.content package into the current Java file. This allows the Java code to use the
- * SharedPreferences interface and access shared preferences, which are used to store data in key-value pairs
- * persistently across multiple sessions of an Android app. The SharedPreferences interface provides methods
- * to read, write, and delete the data stored in shared preferences.
- */
 import android.content.SharedPreferences;
-
-/**The line of code "import android.os.Handler;" imports the Handler class from the android.os package into the current
- * Java file. This allows the Java code to use the Handler class to schedule and handle messages and runnables on a thread's
- * message queue.
- *The Handler class provides a way to post messages and runnables to the main thread's message queue, allowing background
- *  threads to communicate with the UI thread. By using a Handler, a background thread can request an update to the UI or
- *  schedule a task to run on the UI thread at a later time.
- *  it allows developers to create responsive and efficient apps that can perform time-consuming tasks without blocking
- *  the UI thread.
- */
 import android.os.Bundle;
 
-/**
- * This line of code is importing the View class from the Android framework, which is used for creating user interface elements in Android applications.
- *The View class is a fundamental building block of the Android UI, representing a rectangular area that can be drawn and interacted with on the screen.
- * Examples of View subclasses include Button, TextView, EditText, and ImageView, among others.
- *By importing the View class, the developer can use its various methods and properties to customize the appearance and behavior of UI elements in their Android application.
- */
 import android.view.View;
-
-/** This imports the WindowManager class from the Android framework. The WindowManager is responsible for managing the
- * windows that are displayed on the device screen. It provides access to a variety of window-related functions, such
- * as adjusting the size and position of windows, adding or removing views, and handling events related to windows.
- * By importing this class, we can use its functionality to manipulate the window of the activity in which our code is running.
- *
- */
 import android.view.WindowManager;
 
-/**
- * This line of code is importing the Button class from the Android framework, which is a subclass of the TextView class and
- * represents a clickable button that can perform an action when pressed. By importing the Button class, the developer can use
- * it to create a button element in the user interface of their Android application. They can then use various methods and properties
- * of the Button class to customize its appearance and behavior, such as setting the text displayed on the button, specifying an icon or
- * image, and adding an OnClickListener to define what happens when the button is pressed.
- */
+
 import android.widget.Button;
 
-/**
- * This line of code is importing the EditText class from the Android framework, which is a subclass of the TextView class and provides a user
- * interface element for users to enter text input. By importing the EditText class, the developer can use it to create a text input field in the user
- * interface of their Android application. They can then use various methods and properties of the EditText class to customize its appearance and behavior,
- * such as setting the default text value, defining input type, adding a hint or placeholder text, and specifying an OnEditorActionListener to handle input events.
- */
-import android.widget.EditText;
 
-/**
- * This line of code is importing the Toast class from the Android framework, which is a mechanism for displaying short messages or notifications to the user on the screen.
- *By importing the Toast class, the developer can use its static methods to create and display a simple message to the user, typically in the form of a small pop-up box
- * that disappears after a few seconds. The Toast class provides methods to set the duration, position, and content of the message, such as a string of text or a custom layout.
- */
+import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 
 
 /**
@@ -105,11 +58,6 @@ import android.widget.Toast;
 public class Admin_Credentials_Setup extends AppCompatActivity {
 
 
-    /**
-     * This code snippet is declaring a new variable named username of type EditText. The EditText class is a subclass of TextView in the Android framework,
-     * which provides a user interface element for users to enter and edit text input. By declaring a variable of this type, the developer is creating a reference
-     * to an instance of the EditText class, which can be used to manipulate or access the properties and methods of that object.
-     */
     EditText username;
 
 
@@ -227,8 +175,7 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
                 else if (passwordStr.length() < 8) {
                     Toast.makeText(getApplicationContext(), "Password must contain at least 8 characters", Toast.LENGTH_SHORT).show();
                     password.requestFocus();
-                }
-                else {
+                } else {
                     // Check if the password contains at least one lowercase, uppercase letter, one digit, and one special character
                     boolean hasLowerCase = false;
                     boolean hasUpperCase = false;
@@ -264,8 +211,7 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
                     else if (!hasSpecialChar) {
                         Toast.makeText(getApplicationContext(), "Password must contain at least one special character", Toast.LENGTH_SHORT).show();
                         password.requestFocus();
-                    }
-                    else {
+                    } else {
                         // Save the input data to SharedPreferences in Mypref
                         saveData();
                         // Start a new activity
@@ -286,13 +232,39 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
 
     }
 
+    private void updateViews() {username.setText(text);
+        password.setText(text1);
+    }
+
+
+    private SharedPreferences getEncryptedSharedPreferences() {
+        try {
+            String masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
+            return EncryptedSharedPreferences.create(
+                    "MyPref",
+                    masterKeyAlias,
+                    getApplicationContext(),
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            );
+        } catch (GeneralSecurityException | IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     private void saveData() {
         // Get the input text from username and password fields
         String editText = username.getText().toString();
         String editText1 = password.getText().toString();
 
-        // Get the SharedPreferences instance for "MyPref" with private mode
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        // Get the EncryptedSharedPreferences instance for "MyPref"
+        SharedPreferences sharedPreferences = getEncryptedSharedPreferences();
+
+        if (sharedPreferences == null) {
+            // Handle the case when EncryptedSharedPreferences is not available
+            return;
+        }
 
         // Get the SharedPreferences editor to modify the preferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -306,17 +278,16 @@ public class Admin_Credentials_Setup extends AppCompatActivity {
     }
 
     private void loadData() {
-        // Get the SharedPreferences instance for "MyPref" with private mode
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        // Get the EncryptedSharedPreferences instance for "MyPref"
+        SharedPreferences sharedPreferences = getEncryptedSharedPreferences();
+
+        if (sharedPreferences == null) {
+            // Handle the case when EncryptedSharedPreferences is not available
+            return;
+        }
 
         // Retrieve the previously saved text values from SharedPreferences
         text = sharedPreferences.getString(Username, "");
         text1 = sharedPreferences.getString(Password, "");
-    }
-
-    public void updateViews() {
-        // Set the retrieved text values to the username and password fields
-        username.setText(text);
-        password.setText(text1);
     }
 }

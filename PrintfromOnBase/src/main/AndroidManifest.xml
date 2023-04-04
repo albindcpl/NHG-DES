@@ -7,17 +7,19 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+<!--    Commented out the following two permission to remediate insecure permissions security issue
+                as mentioned in PFOB 1.0 Security Report-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
     <application
         android:allowBackup="false"
         android:icon="@drawable/dcpllogo"
         android:label="Print from Onbase"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:useEmbeddedDex="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity

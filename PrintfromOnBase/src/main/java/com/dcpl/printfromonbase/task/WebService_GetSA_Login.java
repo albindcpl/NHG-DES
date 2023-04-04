@@ -54,7 +54,7 @@ public class WebService_GetSA_Login {
             envelope.dotNet = true;
             envelope.setOutputSoapObject(request);
             HttpTransportSE httpTransport = new HttpTransportSE(SOAP_ADDRESS, 5000);
-            HttpsTrustManager.allowAllSSL();
+           // HttpsTrustManager.allowAllSSL();
 //            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
 //            con.setConnectTimeout(1000);
 

@@ -1,5 +1,17 @@
 package com.dcpl.printfromonbase;
 
+/**
+ * This is an Android Java code for an activity that implements a fragment-based user interface.
+ * The code defines a class FragmentActivity that extends AppCompatActivity.
+ * The activity layout is defined in the XML file activity_fragment.xml.
+ *
+ * The onCreate method initializes the user interface components and sets up event listeners for the logout and menu buttons.
+ * It also creates a fragment Fragment_Documents and adds it to the activity layout.
+ *
+ * The CloseWS class is an inner class that extends AsyncTask. It sends a SOAP request to a web service to log out the user session.
+ * Upon successful logout, the activity finishes.
+ */
+
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;

@@ -21,6 +21,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.content.Context;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKey;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.collection.ArraySet;
@@ -71,7 +74,6 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
     String loginadmethod = "AD_Login";
     private ImageView imageView;
     public static String soapAddress;
-    // public static String soapAddress = "http://192.168.43.22/OBWebService/OnBaseWebService.asmx?WSDL/";
     public static String loginResult;
     private Activity activity;
     private ImageView imageview;
@@ -147,8 +149,7 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
             }
 
             spinnerDomain = String.valueOf(spDomain);
-            //          ArrayAdapter<String> adapter = new ArrayAdapter<String>(OnBase_Login_Screen.this, R.layout.ad_loginspinneritem, domainlist);
-//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
                     R.layout.ad_loginspinneritem, domainlist);
             arrayAdapter.setDropDownViewResource(R.layout.ad_loginspinneritem);
@@ -157,7 +158,6 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                    //String myStr = spDomain.getSelectedItem().toString();
 
                 }
 
@@ -199,15 +199,7 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
 
             @Override
             public void onClick(View v) {
-//              getLogin();
-//              loginUser();
-//            }
-//                if
-//                (domain.getText().toString().trim().isEmpty()) {
-//                    Toast.makeText(getApplicationContext(), "Enter your Domain", Toast.LENGTH_SHORT).show();
-//                   domain.requestFocus();
-//                }
-//             else
+
 
                 if (adauth == true) {
                     if (spDomain.getSelectedItem().toString().matches("-Select Domain-")) {
@@ -281,11 +273,8 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
                 Intent intent = new Intent(getApplicationContext(), Admin_Proceed_PopUp.class);
                 startActivity(intent);
                 finish();
-
-
             }
         });
-
         ivKey = findViewById(R.id.ivKeys);
         ivKey.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -295,14 +284,7 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
             }
         });
 
-//        ivKey = findViewById(R.id.ivKeys);
-//        ivKey.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                username.setText("Reliance");
-//                password.setText("password");
-//            }
-//        });
+
 
         imageview = findViewById(R.id.ivquestionMark);
         imageview.setOnClickListener(new View.OnClickListener() {
@@ -328,19 +310,33 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
             }
         });
     }
-//        username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean hasFocus) {
-//                hideKeybaord(view);
-//            }
-//        });
-//
-//
-//    }
-//    private void hideKeybaord(View v) {
-//        InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-//        inputMethodManager.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
-//    }
+
+    private Map<String, String> getAdminCredentials() {
+        try {
+            Context context = getApplicationContext();
+            MasterKey masterKey = new MasterKey.Builder(context)
+                    .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                    .build();
+
+            SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(
+                    context,
+                    "AdminCredentialsPref",
+                    masterKey,
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM);
+
+            String username = sharedPreferences.getString("username", "");
+            String password = sharedPreferences.getString("password", "");
+
+            Map<String, String> credentials = new HashMap<>();
+            credentials.put("username", username);
+            credentials.put("password", password);
+            return credentials;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 
     @Override
@@ -372,10 +368,7 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
             String login = wsResult.getdocument();
             if (!login.equals("")) {
                 Intent intent = new Intent(OnBase_Login_Screen.this, FragmentActivity.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putString("username", stringusername);
-//                bundle.putString("password", stringpassword);
-//                intent.putExtras(bundle);
+
                 startActivity(intent);
                 finish();
 
@@ -504,38 +497,25 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
 
                 ArrayList<String> listOfValues = new ArrayList<String>(values);
 
-               // System.out.println("ArrayList Of Values :");
 
                 for (String value : listOfValues)
                 {
-                 //   System.out.println(value);
                 }
-
-              //  System.out.println("--------------------------");
-
-                //Getting the Set of entries
 
                 Set<Map.Entry<String, String>> entrySet = responseHeaders.entrySet();
 
-                //Creating an ArrayList Of Entry objects
 
                 ArrayList<Map.Entry<String, String>> listOfEntry = new ArrayList<Map.Entry<String,String>>(entrySet);
-
-//                System.out.println("ArrayList of Key-Values :");
-
 
 
                 for (Map.Entry<String, String> entry : listOfEntry)
                 {
-                 //   System.out.println(listOfEntry.get(Integer.parseInt("5")));
 
-                  // System.out.println(entry.getKey()+" : "+entry.getValue());
                 }
 
                 System.out.println(listOfEntry.get(Integer.parseInt("6")));
 
-       //         String rawCookies = responseHeaders.get("Cookie");
-              //  Log.i("cookies",rawCookies);
+
                 return super.parseNetworkResponse(response);
             }
 
@@ -566,13 +546,12 @@ public class OnBase_Login_Screen extends AppCompatActivity implements View.OnCli
                       //  Toast.makeText(LoginActivity.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }){
+
             @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<>();
-                params.put("username","test@edu.com");
-                params.put("password","admin");
-                return params;
+            protected Map<String, String> getParams() {
+                return getAdminCredentials();
             }
+
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
